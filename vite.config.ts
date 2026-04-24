@@ -1,10 +1,10 @@
 import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from "vite";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [reactRouter()],
-  base: mode === "production" ? "/npipeline.net/" : "/",
+  base: "/",
   resolve: {
     tsconfigPaths: true,
   },
-}));
+});
