@@ -1,0 +1,11 @@
+*.log
+node_modules/
+dist/
+build/
+.cache/
+.public/
+.react-router/
+.env
+.DS_Store
+.vscode/
+.idea/
