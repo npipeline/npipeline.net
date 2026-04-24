@@ -7,7 +7,7 @@ export default function HomePage() {
       <Stack align="center" gap="lg">
         <Title order={1}>Welcome to NPipeline</Title>
         <Text size="lg" c="dimmed" ta="center">
-          Building the future of pipelines, one step at a time.
+          High-Performance, Type-Safe, Streaming Data Pipelines in .NET{" "}
         </Text>
         <Button component={Link} to="/about" size="md">
           Learn More
