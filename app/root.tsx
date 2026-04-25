@@ -9,7 +9,6 @@ import { MantineProvider } from "@mantine/core";
 import { theme } from "~/styles/mantine-theme";
 
 import "@mantine/core/styles.css";
-import "@gfazioli/mantine-parallax/styles.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,7 +19,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body style={{ backgroundColor: "#001219", color: "#94D2BD" }}>
+      <body>
         {children}
         <ScrollRestoration />
         <Scripts />

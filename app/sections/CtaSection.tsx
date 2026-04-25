@@ -1,59 +1,58 @@
-import { Container, Title, Text, Button, Group } from "@mantine/core";
+import { Box, Container, Title, Text, Button, Group, Card, Stack } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
+import { SectionHeader } from "~/components/SectionHeader";
+import { ScrollReveal } from "~/components/ScrollReveal";
 
-export function CtaSection() {
+export function CTASection() {
   return (
-    <div
-      style={{
-        background: "linear-gradient(180deg, #0A9396 0%, #005F73 60%, #001219 100%)",
-        padding: "80px 0",
-      }}
-    >
-      <Container size="sm" ta="center">
-        <Title order={2} c="white" fz={{ base: 24, md: 30 }} mb={8}>
-          Ready to build better pipelines?
-        </Title>
-        <Text c="#94D2BD" mb="xl">
-          Get started in minutes. Build your first pipeline in 15.
-        </Text>
-        <div
-          style={{
-            backgroundColor: "#0d1117",
-            borderRadius: 6,
-            padding: "10px 28px",
-            fontFamily: "monospace",
-            fontSize: "14px",
-            color: "#0A9396",
-            display: "inline-block",
-            marginBottom: "20px",
-          }}
-        >
-          dotnet add package NPipeline
-        </div>
-        <Group justify="center" gap="md" style={{ marginTop: "12px" }}>
-          <Button
-            size="md"
-            bg="#EE9B00"
-            c="#001219"
-            radius="sm"
-            fw={600}
-            component="a"
-            href="https://www.npipeline.dev/docs/getting-started/quick-start"
-          >
-            Getting Started
-          </Button>
-          <Button
-            size="md"
-            variant="outline"
-            c="#94D2BD"
-            radius="sm"
-            style={{ borderColor: "rgba(148,210,189,0.3)" }}
-            component="a"
-            href="https://www.npipeline.dev/docs/core-concepts"
-          >
-            Core Concepts
-          </Button>
-        </Group>
+    <Box component="section" py={{ base: 45, md: 70 }}>
+      <Container size="lg">
+        <ScrollReveal>
+          <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0" }} ta="center">
+            <Stack align="center" gap="lg">
+              <SectionHeader label="Ready?" />
+              <Title order={2} style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+                Ready to build better pipelines?
+              </Title>
+              <Text maw={560} c="dimmed">
+                Get started in minutes. Build your first pipeline in 15.
+              </Text>
+
+              <Box
+                component="pre"
+                style={{
+                  backgroundColor: "#0D1117",
+                  color: "#C9D1D9",
+                  padding: "12px 20px",
+                  borderRadius: 8,
+                  fontSize: 14,
+                  overflowX: "auto",
+                  fontFamily:
+                    'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
+                }}
+              >
+                <code>dotnet add package NPipeline</code>
+              </Box>
+
+              <Group gap="md">
+                <Button
+                  size="lg"
+                  rightSection={<IconChevronRight size={18} />}
+                  color="teal"
+                  radius="sm"
+                  component="a"
+                  href="#getting-started"
+                >
+                  Getting Started
+                </Button>
+                <Button size="lg" variant="default" radius="sm" component="a" href="#core-concepts">
+                  Explore Core Concepts
+                </Button>
+              </Group>
+            </Stack>
+          </Card>
+        </ScrollReveal>
       </Container>
-    </div>
+    </Box>
   );
 }

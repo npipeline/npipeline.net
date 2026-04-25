@@ -1,49 +1,49 @@
 import { Box, Container, Title, Text, SimpleGrid, Card, Group } from "@mantine/core";
-import { IconRefresh, IconShieldCheck, IconBug } from "@tabler/icons-react";
+import { IconBox, IconServer, IconTestPipe } from "@tabler/icons-react";
 import { SectionHeader } from "~/components/SectionHeader";
 import { ScrollReveal } from "~/components/ScrollReveal";
 
-const resilience = [
+const testing = [
   {
-    icon: IconRefresh,
-    title: "Retry policies",
+    icon: IconBox,
+    title: "Isolated nodes",
     description:
-      "Transient failures get automatic retries with configurable backoff. Persistent failures trigger node restarts or route items to dead-letter queues.",
+      "Test each node independently. Pass in test data, assert on outputs. No pipeline ceremony required.",
   },
   {
-    icon: IconShieldCheck,
-    title: "Circuit breakers",
+    icon: IconServer,
+    title: "In-memory testing",
     description:
-      "Protect downstream systems from cascading failures. When a dependency is struggling, stop hammering it and give it time to recover.",
+      "Use the testing extensions to run entire pipelines in memory. Verify end-to-end behaviour without external dependencies.",
   },
   {
-    icon: IconBug,
-    title: "Granular error handling",
+    icon: IconTestPipe,
+    title: "Assertion libraries",
     description:
-      "Handle errors at the item level or the stream level. One bad record doesn't have to poison your entire batch.",
+      "First-class support for FluentAssertions and AwesomeAssertions. Write expressive tests that read like specifications.",
   },
 ];
 
-export function ResilienceSection() {
+export function TestingSection() {
   return (
     <Box component="section" py={{ base: 30, md: 60 }} bg="#FBFDFF">
       <Container size="lg">
         <ScrollReveal>
-          <SectionHeader label="Resilience" />
+          <SectionHeader label="Testing" />
         </ScrollReveal>
         <ScrollReveal delay={80}>
           <Title order={2} ta="center" mb="xs" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
-            Built for the real world, where things fail
+            Designed for testing from day one
           </Title>
         </ScrollReveal>
         <ScrollReveal delay={160}>
           <Text ta="center" maw={640} mx="auto" mb="xl" c="dimmed">
-            Production pipelines encounter bad data, network blips, and overwhelmed dependencies. NPipeline gives you the tools to handle failure gracefully — without bringing down your entire system.
+            Every node is a standalone class. Test your transforms with simple unit tests — no mocking of pipeline infrastructure required.
           </Text>
         </ScrollReveal>
 
         <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" style={{ gridAutoRows: "1fr" }}>
-          {resilience.map((item, i) => (
+          {testing.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
               <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0", height: "100%" }}>
                 <Group gap="sm" align="center" mb="sm">

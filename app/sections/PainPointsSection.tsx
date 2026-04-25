@@ -1,20 +1,23 @@
-import { Container, Text, Grid, Stack } from "@mantine/core";
+import { Box, Container, Title, Text, SimpleGrid, Card, Group } from "@mantine/core";
+import { IconBrain, IconSettings, IconExclamationCircle } from "@tabler/icons-react";
+import { SectionHeader } from "~/components/SectionHeader";
+import { ScrollReveal } from "~/components/ScrollReveal";
 
 const painPoints = [
   {
-    border: "#9B2226",
+    icon: IconBrain,
     title: "Memory nightmares",
     description:
-      "Your pipeline loads everything into memory, then crashes at 2 AM when someone uploads a file that's slightly larger than usual.",
+      "Your pipeline loads everything into memory, then crashes at 2 AM when someone uploads a file that's slightly larger than usual. You've added more RAM twice this year.",
   },
   {
-    border: "#CA6702",
+    icon: IconSettings,
     title: "Spaghetti transforms",
     description:
-      "Your data processing logic started simple. Now it's 2,000 lines of nested loops and conditional statements that nobody wants to touch — or test.",
+      "Your data processing logic started simple. Now it's 2,000 lines of nested loops and conditional statements that nobody wants to touch - or test.",
   },
   {
-    border: "#EE9B00",
+    icon: IconExclamationCircle,
     title: "Silent failures",
     description:
       "One malformed record takes down your entire batch. You've wrapped everything in try-catch blocks, but errors still slip through to production.",
@@ -23,33 +26,33 @@ const painPoints = [
 
 export function PainPointsSection() {
   return (
-    <div style={{ background: "#001219", padding: "64px 0" }}>
-      <Container size="xl">
-        <Text
-          size="xs"
-          tt="uppercase"
-          lts={2}
-          c="#AE2012"
-          mb="xl"
-          fw={600}
-        >
-          Data processing in .NET shouldn't feel like this
-        </Text>
-        <Grid gap="xl">
-          {painPoints.map((p) => (
-            <Grid.Col key={p.title} span={{ base: 12, md: 4 }}>
-              <Stack gap={4} style={{ borderLeft: `3px solid ${p.border}`, paddingLeft: 16 }}>
-                <Text size="lg" fw={600} c={p.border}>
-                  {p.title}
+    <Box component="section" py={{ base: 30, md: 60 }}>
+      <Container size="lg">
+        <ScrollReveal>
+          <SectionHeader label="The Problem" />
+        </ScrollReveal>
+        <ScrollReveal delay={80}>
+          <Title order={2} ta="center" mb="xl" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+            Data processing in .NET shouldn't feel like this
+          </Title>
+        </ScrollReveal>
+
+        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" mt="xl" style={{ gridAutoRows: "1fr" }}>
+          {painPoints.map((item, i) => (
+            <ScrollReveal key={item.title} delay={i * 100}>
+              <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0", height: "100%" }}>
+                <Group gap="sm" align="center" mb="sm">
+                  <item.icon size={32} color="#005F73" stroke={1.5} />
+                  <Title order={4}>{item.title}</Title>
+                </Group>
+                <Text size="md" c="dimmed">
+                  {item.description}
                 </Text>
-                <Text size="sm" c="#94D2BD" lh={1.6} style={{ opacity: 0.8 }}>
-                  {p.description}
-                </Text>
-              </Stack>
-            </Grid.Col>
+              </Card>
+            </ScrollReveal>
           ))}
-        </Grid>
+        </SimpleGrid>
       </Container>
-    </div>
+    </Box>
   );
 }

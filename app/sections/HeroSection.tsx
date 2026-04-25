@@ -1,212 +1,84 @@
-import {
-  Container,
-  Title,
-  Text,
-  Button,
-  Group,
-  Grid,
-  GridCol,
-} from "@mantine/core";
-import { Parallax } from "@gfazioli/mantine-parallax";
-
-function CodeBlock() {
-  return (
-    <div
-      style={{
-        backgroundColor: "#0d1117",
-        border: "1px solid rgba(10,147,150,0.2)",
-        borderRadius: 8,
-        padding: "24px",
-        fontFamily: "'Fira Code', 'Cascadia Code', 'Consolas', monospace",
-        fontSize: 13,
-        lineHeight: 1.7,
-        overflowX: "auto",
-      }}
-    >
-      <div>
-        <span style={{ color: "#0A9396" }}>var</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>source</span>{" "}
-        <span style={{ color: "#94D2BD" }}>=</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>builder</span>
-        <span style={{ color: "#EE9B00" }}>.</span>
-        <span style={{ color: "#EE9B00" }}>AddSource</span>
-        <span style={{ color: "#94D2BD" }}>&lt;</span>
-        <span style={{ color: "#94D2BD" }}>OrderSource</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#94D2BD" }}>Order</span>
-        <span style={{ color: "#94D2BD" }}>&gt;</span>
-        <span style={{ color: "#94D2BD" }}>(</span>
-        <span style={{ color: "#94D2BD" }}>)</span>
-        <span style={{ color: "#94D2BD" }}>;</span>
-      </div>
-      <div>
-        <span style={{ color: "#0A9396" }}>var</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>validate</span>{" "}
-        <span style={{ color: "#94D2BD" }}>=</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>builder</span>
-        <span style={{ color: "#EE9B00" }}>.</span>
-        <span style={{ color: "#EE9B00" }}>AddTransform</span>
-        <span style={{ color: "#94D2BD" }}>&lt;</span>
-        <span style={{ color: "#94D2BD" }}>ValidateOrder</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#94D2BD" }}>Order</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#94D2BD" }}>Order</span>
-        <span style={{ color: "#94D2BD" }}>&gt;</span>
-        <span style={{ color: "#94D2BD" }}>(</span>
-        <span style={{ color: "#94D2BD" }}>)</span>
-        <span style={{ color: "#94D2BD" }}>;</span>
-      </div>
-      <div>
-        <span style={{ color: "#0A9396" }}>var</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>enrich</span>{" "}
-        <span style={{ color: "#94D2BD" }}>=</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>builder</span>
-        <span style={{ color: "#EE9B00" }}>.</span>
-        <span style={{ color: "#EE9B00" }}>AddTransform</span>
-        <span style={{ color: "#94D2BD" }}>&lt;</span>
-        <span style={{ color: "#94D2BD" }}>EnrichWithCustomer</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#94D2BD" }}>Order</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#94D2BD" }}>EnrichedOrder</span>
-        <span style={{ color: "#94D2BD" }}>&gt;</span>
-        <span style={{ color: "#94D2BD" }}>(</span>
-        <span style={{ color: "#94D2BD" }}>)</span>
-        <span style={{ color: "#94D2BD" }}>;</span>
-      </div>
-      <div>
-        <span style={{ color: "#0A9396" }}>var</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>sink</span>{" "}
-        <span style={{ color: "#94D2BD" }}>=</span>{" "}
-        <span style={{ color: "#E9D8A6" }}>builder</span>
-        <span style={{ color: "#EE9B00" }}>.</span>
-        <span style={{ color: "#EE9B00" }}>AddSink</span>
-        <span style={{ color: "#94D2BD" }}>&lt;</span>
-        <span style={{ color: "#94D2BD" }}>DatabaseSink</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#94D2BD" }}>EnrichedOrder</span>
-        <span style={{ color: "#94D2BD" }}>&gt;</span>
-        <span style={{ color: "#94D2BD" }}>(</span>
-        <span style={{ color: "#94D2BD" }}>)</span>
-        <span style={{ color: "#94D2BD" }}>;</span>
-      </div>
-      <div style={{ height: 8 }} />
-      <div>
-        <span style={{ color: "#E9D8A6" }}>builder</span>
-        <span style={{ color: "#EE9B00" }}>.</span>
-        <span style={{ color: "#EE9B00" }}>Connect</span>
-        <span style={{ color: "#94D2BD" }}>(</span>
-        <span style={{ color: "#E9D8A6" }}>source</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#E9D8A6" }}>validate</span>
-        <span style={{ color: "#94D2BD" }}>)</span>
-        <span style={{ color: "#94D2BD" }}>;</span>
-      </div>
-      <div>
-        <span style={{ color: "#E9D8A6" }}>builder</span>
-        <span style={{ color: "#EE9B00" }}>.</span>
-        <span style={{ color: "#EE9B00" }}>Connect</span>
-        <span style={{ color: "#94D2BD" }}>(</span>
-        <span style={{ color: "#E9D8A6" }}>validate</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#E9D8A6" }}>enrich</span>
-        <span style={{ color: "#94D2BD" }}>)</span>
-        <span style={{ color: "#94D2BD" }}>;</span>
-      </div>
-      <div>
-        <span style={{ color: "#E9D8A6" }}>builder</span>
-        <span style={{ color: "#EE9B00" }}>.</span>
-        <span style={{ color: "#EE9B00" }}>Connect</span>
-        <span style={{ color: "#94D2BD" }}>(</span>
-        <span style={{ color: "#E9D8A6" }}>enrich</span>
-        <span style={{ color: "#94D2BD" }}>, </span>
-        <span style={{ color: "#E9D8A6" }}>sink</span>
-        <span style={{ color: "#94D2BD" }}>)</span>
-        <span style={{ color: "#94D2BD" }}>;</span>
-      </div>
-    </div>
-  );
-}
+import { Box, Container, Title, Text, Button, Group, Pill } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
+import { PlaceholderImage } from "~/components/PlaceholderImage";
+import { ScrollReveal } from "~/components/ScrollReveal";
 
 export function HeroSection() {
   return (
-    <div
-      style={{
-        background:
-          "linear-gradient(160deg, #001219 0%, #005F73 50%, #0A9396 100%)",
-        padding: "80px 0 60px",
-      }}
-    >
-      <Container size="xl">
-        <Parallax
-          perspective={800}
-          initialRotationX={5}
-          initialRotationY={5}
-          lightEffect
-        >
-          <Grid gap="xl" align="center">
-            <GridCol span={{ base: 12, md: 7 }}>
-              <Text
-                size="xs"
-                tt="uppercase"
-                lts={3}
-                c="#94D2BD"
-                mb="md"
-              >
-                High-Performance · Type-Safe · Streaming
-              </Text>
-              <Title
-                fz={{ base: 30, md: 38 }}
-                fw={700}
-                c="white"
-              >
-                Data Pipelines{" "}
-                <Text
-                  component="span"
-                  inherit
-                  c="#E9D8A6"
-                >
-                  That Don&apos;t Break
-                </Text>
-              </Title>
-              <Text
-                c="#94D2BD"
-                mt="md"
-                maw={480}
-                lh={1.6}
-              >
-                Build robust, graph-based streaming data workflows in C#. 
-                NPipeline gives you type-safe connectors, back-pressure handling, 
-                and composable transforms — so your pipelines run reliably at scale.
-              </Text>
-              <Group mt="xl">
-                <Button
-                  size="md"
-                  bg="#EE9B00"
-                  c="#001219"
-                >
-                  Quick Start
-                </Button>
-                <Button
-                  size="md"
-                  variant="outline"
-                  c="#94D2BD"
-                  style={{ borderColor: "#94D2BD" }}
-                >
-                  View Docs
-                </Button>
-              </Group>
-            </GridCol>
-            <GridCol
-              span={{ base: 12, md: 5 }}
-              mt={{ base: "xl", md: 0 }}
+    <Box component="section" pt={75} pb={25} style={{ position: "relative", overflow: "hidden" }}>
+      <Container size="lg" style={{ position: "relative", zIndex: 2 }}>
+        <ScrollReveal delay={0}>
+          <Pill
+            size="lg"
+            style={{
+              backgroundColor: "#F5F8FC",
+              color: "#005F73",
+              border: "1px solid #E4EAF0",
+              marginBottom: 24,
+            }}
+          >
+            High-Performance, Type-Safe, Streaming Data Pipelines in .NET
+          </Pill>
+        </ScrollReveal>
+
+        <ScrollReveal delay={80}>
+          <Title
+            order={1}
+            style={{
+              fontSize: "clamp(2rem, 4.5vw, 3.4rem)",
+              lineHeight: 1.15,
+              maxWidth: 760,
+            }}
+            mb="lg"
+          >
+            NPipeline is a powerful, flexible library designed for constructing robust, graph-based streaming data workflows.
+          </Title>
+        </ScrollReveal>
+
+        <ScrollReveal delay={160}>
+          <Text size="lg" c="dimmed" maw={560} mb="xl">
+            By combining the type safety of C# with a directed acyclic graph (DAG) architecture, NPipeline empowers developers to build complex ETL processes, real-time data streams, and event-driven architectures that are easy to test, debug, and maintain.
+          </Text>
+        </ScrollReveal>
+
+        <ScrollReveal delay={240}>
+          <Group gap="md" mb="xl">
+            <Button
+              size="lg"
+              rightSection={<IconChevronRight size={18} />}
+              color="teal"
+              radius="sm"
+              component="a"
+              href="#better-way"
             >
-              <CodeBlock />
-            </GridCol>
-          </Grid>
-        </Parallax>
+              Why NPipeline?
+            </Button>
+            <Button size="lg" variant="default" radius="sm" component="a" href="#getting-started">
+              Quick Start
+            </Button>
+          </Group>
+        </ScrollReveal>
+
+        <ScrollReveal delay={320}>
+          <Group gap="xs">
+            <Pill size="sm" style={{ backgroundColor: "#F5F8FC", border: "1px solid #E4EAF0", color: "#005F73" }}>
+              Streaming-first
+            </Pill>
+            <Pill size="sm" style={{ backgroundColor: "#F5F8FC", border: "1px solid #E4EAF0", color: "#005F73" }}>
+              Type-safe
+            </Pill>
+            <Pill size="sm" style={{ backgroundColor: "#F5F8FC", border: "1px solid #E4EAF0", color: "#005F73" }}>
+              Zero-allocation fast paths
+            </Pill>
+          </Group>
+        </ScrollReveal>
       </Container>
-    </div>
+
+      <Container size="lg" mt={60}>
+        <ScrollReveal delay={400}>
+          <PlaceholderImage label="Hero visual / pipeline diagram" height={420} />
+        </ScrollReveal>
+      </Container>
+    </Box>
   );
 }

@@ -1,42 +1,83 @@
-import { Container, Text, Badge, Group } from "@mantine/core";
+import { Box, Container, Title, Text, SimpleGrid, Card, Group } from "@mantine/core";
+import {
+  IconTruckDelivery,
+  IconLiveView,
+  IconFileCheck,
+  IconPackages,
+  IconBolt,
+  IconApi,
+} from "@tabler/icons-react";
+import { SectionHeader } from "~/components/SectionHeader";
+import { ScrollReveal } from "~/components/ScrollReveal";
 
 const useCases = [
-  { label: "ETL Workflows", bg: "rgba(0,95,115,0.3)", border: "rgba(0,95,115,0.5)", color: "#0A9396" },
-  { label: "Real-time Streaming", bg: "rgba(10,147,150,0.3)", border: "rgba(10,147,150,0.5)", color: "#94D2BD" },
-  { label: "Data Validation", bg: "rgba(238,155,0,0.2)", border: "rgba(238,155,0,0.4)", color: "#EE9B00" },
-  { label: "Batch Processing", bg: "rgba(148,210,189,0.15)", border: "rgba(148,210,189,0.3)", color: "#94D2BD" },
-  { label: "Event-driven", bg: "rgba(202,103,2,0.2)", border: "rgba(202,103,2,0.4)", color: "#CA6702" },
-  { label: "Microservice Integration", bg: "rgba(187,62,3,0.15)", border: "rgba(187,62,3,0.3)", color: "#BB3E03" },
+  {
+    icon: IconTruckDelivery,
+    title: "ETL workflows",
+    description:
+      "Extract from databases, APIs, and files. Transform with validation and enrichment. Load to your destination. All with clear, testable code.",
+  },
+  {
+    icon: IconLiveView,
+    title: "Real-time streaming",
+    description:
+      "Process data as it arrives from message queues, webhooks, or IoT devices. Sub-millisecond latency to first item processed.",
+  },
+  {
+    icon: IconFileCheck,
+    title: "Data validation",
+    description:
+      "Implement complex validation rules as discrete, testable transforms. Route invalid items to review queues without stopping the pipeline.",
+  },
+  {
+    icon: IconPackages,
+    title: "Batch processing",
+    description:
+      "Process millions of historical records without running out of memory. Streaming architecture means predictable resource usage.",
+  },
+  {
+    icon: IconBolt,
+    title: "Event-driven systems",
+    description:
+      "React to events with complex processing logic. Fan out to multiple sinks. Handle backpressure gracefully.",
+  },
+  {
+    icon: IconApi,
+    title: "Microservice integration",
+    description:
+      "Transform data between services with different schemas. Enrich with data from multiple sources. Maintain type safety across boundaries.",
+  },
 ];
 
 export function UseCasesSection() {
   return (
-    <div style={{ background: "#001219", padding: "48px 0" }}>
-      <Container size="xl">
-        <Text size="xs" tt="uppercase" lts={2} c="#E9D8A6" ta="center" mb="lg">
-          Built for these problems
-        </Text>
-        <Group justify="center" gap="sm" wrap="wrap">
-          {useCases.map((uc) => (
-            <Badge
-              key={uc.label}
-              variant="outline"
-              size="lg"
-              radius="xl"
-              style={{
-                backgroundColor: uc.bg,
-                borderColor: uc.border,
-                color: uc.color,
-                padding: "8px 20px",
-                fontSize: "13px",
-                fontWeight: 500,
-              }}
-            >
-              {uc.label}
-            </Badge>
+    <Box component="section" py={{ base: 30, md: 60 }}>
+      <Container size="lg">
+        <ScrollReveal>
+          <SectionHeader label="Use Cases" />
+        </ScrollReveal>
+        <ScrollReveal delay={80}>
+          <Title order={2} ta="center" mb="xl" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+            Built for these problems
+          </Title>
+        </ScrollReveal>
+
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg" style={{ gridAutoRows: "1fr" }}>
+          {useCases.map((item, i) => (
+            <ScrollReveal key={item.title} delay={i * 80}>
+              <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0", height: "100%" }}>
+                <Group gap="sm" align="center" mb="sm">
+                  <item.icon size={32} color="#005F73" stroke={1.5} />
+                  <Title order={4}>{item.title}</Title>
+                </Group>
+                <Text size="md" c="dimmed">
+                  {item.description}
+                </Text>
+              </Card>
+            </ScrollReveal>
           ))}
-        </Group>
+        </SimpleGrid>
       </Container>
-    </div>
+    </Box>
   );
 }
