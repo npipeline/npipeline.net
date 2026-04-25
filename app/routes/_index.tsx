@@ -27,9 +27,13 @@ export default function HomePage() {
         <Box id="studio">
           <StudioSection />
         </Box>
-        <PerformanceSection />
+        <Box id="performance">
+          <PerformanceSection />
+        </Box>
         <FastPathsSection />
-        <ResilienceSection />
+        <Box id="resilience">
+          <ResilienceSection />
+        </Box>
         <Box id="features">
           <UseCasesSection />
         </Box>

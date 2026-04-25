@@ -31,8 +31,11 @@ export function Header() {
               <Anchor href="#better-way" style={{ fontSize: 15, color: "#405C84", textDecoration: "none" }}>
                 Why NPipeline
               </Anchor>
-              <Anchor href="#features" style={{ fontSize: 15, color: "#405C84", textDecoration: "none" }}>
-                Features
+              <Anchor href="#performance" style={{ fontSize: 15, color: "#405C84", textDecoration: "none" }}>
+                Performance
+              </Anchor>
+              <Anchor href="#resilience" style={{ fontSize: 15, color: "#405C84", textDecoration: "none" }}>
+                Resilience
               </Anchor>
               <Anchor href="#studio" style={{ fontSize: 15, color: "#405C84", textDecoration: "none" }}>
                 Studio
@@ -66,8 +69,11 @@ export function Header() {
           <Anchor href="#better-way" style={{ fontSize: 18, color: "#001219", textDecoration: "none" }} onClick={close}>
             Why NPipeline
           </Anchor>
-          <Anchor href="#features" style={{ fontSize: 18, color: "#001219", textDecoration: "none" }} onClick={close}>
-            Features
+          <Anchor href="#performance" style={{ fontSize: 18, color: "#001219", textDecoration: "none" }} onClick={close}>
+            Performance
+          </Anchor>
+          <Anchor href="#resilience" style={{ fontSize: 18, color: "#001219", textDecoration: "none" }} onClick={close}>
+            Resilience
           </Anchor>
           <Anchor href="#studio" style={{ fontSize: 18, color: "#001219", textDecoration: "none" }} onClick={close}>
             Studio
