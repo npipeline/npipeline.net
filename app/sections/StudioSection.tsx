@@ -6,7 +6,7 @@ import { ScrollReveal } from "~/components/ScrollReveal";
 
 export function StudioSection() {
   return (
-    <Box component="section" py={{ base: 30, md: 60 }}>
+    <Box component="section" py={{ base: 30, md: 60 }} bg="#F8F9FA">
       <Container size="lg">
         <ScrollReveal>
           <SectionHeader label="Visual Debugging" />
@@ -29,11 +29,21 @@ export function StudioSection() {
                   See your pipeline as it runs
                 </Title>
                 <Text size="lg" c="dimmed" maw={600}>
-                  NPipeline Studio is a visual debugging companion that lets you inspect live data flowing through every node. Trace items from source to sink, inspect transforms in real time, and catch issues before they hit production.
+                  Stop debugging in the dark. NPipeline Studio provides a high-fidelity window into your runtime, allowing you to observe data flow and inspect state as it happens. Bridge the gap between code and execution to build resilient pipelines with total clarity.
                 </Text>
               </Box>
 
-              <PlaceholderImage label="NPipeline Studio screenshot / UI mockup" height={400} />
+              <Box
+                component="img"
+                src="/npipeline-studio.png"
+                alt="NPipeline Studio"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: 4,
+                  border: "1px solid #E4EAF0",
+                }}
+              />
 
               <Group gap="md">
                 <Button size="md" rightSection={<IconChevronRight size={18} />} color="teal" radius="sm">
