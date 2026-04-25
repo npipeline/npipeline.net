@@ -21,7 +21,9 @@ export default function HomePage() {
       <Box bg="white" style={{ minHeight: "100vh" }}>
         <HeroSection />
         <PainPointsSection />
-        <BetterWaySection />
+        <Box id="better-way">
+          <BetterWaySection />
+        </Box>
         <Box id="studio">
           <StudioSection />
         </Box>

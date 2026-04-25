@@ -37,6 +37,9 @@ export function Header() {
               <Anchor href="#studio" style={{ fontSize: 15, color: "#405C84", textDecoration: "none" }}>
                 Studio
               </Anchor>
+            </Group>
+
+            <Group visibleFrom="md">
               <Anchor
                 href="https://github.com/npipeline/npipeline"
                 target="_blank"
@@ -48,9 +51,6 @@ export function Header() {
                   <IconExternalLink size={14} />
                 </Group>
               </Anchor>
-            </Group>
-
-            <Group visibleFrom="md">
               <Button size="sm" color="teal" radius="sm" component="a" href="#getting-started">
                 Get Started
               </Button>
