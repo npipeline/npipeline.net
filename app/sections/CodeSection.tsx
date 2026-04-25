@@ -1,6 +1,7 @@
 import { Box, Container, Title, Text, Card } from "@mantine/core";
 import { SectionHeader } from "~/components/SectionHeader";
 import { ScrollReveal } from "~/components/ScrollReveal";
+import { CodeHighlight } from "~/components/CodeHighlight";
 
 const codeBlock = `public void Define(PipelineBuilder builder, PipelineContext context)
 {
@@ -24,7 +25,7 @@ const codeBlock = `public void Define(PipelineBuilder builder, PipelineContext c
 
 export function CodeSection() {
   return (
-    <Box component="section" py={{ base: 30, md: 60 }}>
+    <Box component="section" py={{ base: 30, md: 60 }} bg="#F8F9FA">
       <Container size="lg">
         <ScrollReveal>
           <SectionHeader label="Developer Experience" />
@@ -47,22 +48,7 @@ export function CodeSection() {
             bg="white"
             style={{ border: "1px solid #E4EAF0", overflow: "hidden" }}
           >
-            <Box
-              component="pre"
-              style={{
-                backgroundColor: "#0D1117",
-                color: "#C9D1D9",
-                padding: 24,
-                borderRadius: 8,
-                fontSize: 13,
-                overflowX: "auto",
-                fontFamily:
-                  'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
-                lineHeight: 1.6,
-              }}
-            >
-              <code>{codeBlock}</code>
-            </Box>
+            <CodeHighlight code={codeBlock} language="csharp" />
           </Card>
         </ScrollReveal>
 

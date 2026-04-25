@@ -37,7 +37,7 @@ const architecture = [
 
 export function BetterWaySection() {
   return (
-    <Box component="section" id="better-way" py={{ base: 30, md: 60 }} bg="#FBFDFF">
+    <Box component="section" id="better-way" py={{ base: 30, md: 60 }} bg="white">
       <Container size="lg">
         <ScrollReveal>
           <SectionHeader label="Architecture" />

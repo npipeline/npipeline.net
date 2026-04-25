@@ -51,8 +51,8 @@ export function Header() {
                   <IconExternalLink size={14} />
                 </Group>
               </Anchor>
-              <Button size="sm" color="teal" radius="sm" component="a" href="#getting-started">
-                Get Started
+              <Button size="sm" color="teal" radius="sm" component="a" href="https://docs.npipeline.net">
+                Docs
               </Button>
             </Group>
 

@@ -26,7 +26,7 @@ const testing = [
 
 export function TestingSection() {
   return (
-    <Box component="section" py={{ base: 30, md: 60 }} bg="#FBFDFF">
+    <Box component="section" py={{ base: 30, md: 60 }} bg="white">
       <Container size="lg">
         <ScrollReveal>
           <SectionHeader label="Testing" />

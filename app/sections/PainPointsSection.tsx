@@ -26,7 +26,7 @@ const painPoints = [
 
 export function PainPointsSection() {
   return (
-    <Box component="section" py={{ base: 30, md: 60 }}>
+    <Box component="section" py={{ base: 30, md: 60 }} bg="#F8F9FA">
       <Container size="lg">
         <ScrollReveal>
           <SectionHeader label="The Problem" />
