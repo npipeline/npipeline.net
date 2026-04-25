@@ -1,0 +1,436 @@
+<h2>Refined Approach A — Filigran-Inspired Flow</h2>
+<p class="subtitle">Less boxy, more breathing room, full-bleed sections with organic flow. Click to compare.</p>
+
+<div class="cards">
+  <div class="card" data-choice="refined-a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: #001219; padding: 0; border-radius: 12px; overflow: hidden; min-height: 700px; display: flex; flex-direction: column;">
+
+        <!-- NAV -->
+        <div style="background: #001219ee; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #005F7330;">
+          <div style="font-size: 14px; font-weight: 700; color: #0A9396; letter-spacing: 1px;">NPipeline</div>
+          <div style="display: flex; gap: 18px; align-items: center;">
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Features</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Performance</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Code</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Docs</div>
+            <div style="background: #0A9396; padding: 5px 14px; border-radius: 5px; font-size: 9px; font-weight: 600; color: white;">Get Started</div>
+          </div>
+        </div>
+
+        <!-- HERO — full bleed gradient, large type -->
+        <div style="background: linear-gradient(170deg, #001219 0%, #005F73 40%, #0A9396 100%); padding: 64px 40px 48px; text-align: center; position: relative;">
+          <div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 300px; height: 300px; background: radial-gradient(circle, #0A939620 0%, transparent 70%); border-radius: 50%;"></div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 3px; color: #94D2BD; margin-bottom: 16px; position: relative;">High-Performance · Type-Safe · Streaming</div>
+          <div style="font-size: 32px; font-weight: 700; color: white; line-height: 1.15; max-width: 480px; margin: 0 auto; position: relative;">
+            Data Pipelines<br>
+            <span style="color: #E9D8A6;">That Don't Break</span>
+          </div>
+          <div style="font-size: 12px; color: #94D2BD; margin-top: 16px; max-width: 380px; margin-left: auto; margin-right: auto; line-height: 1.6; position: relative;">
+            Build robust, graph-based streaming workflows in C# with type safety, constant memory, and zero-allocation fast paths.
+          </div>
+          <div style="margin-top: 28px; display: flex; gap: 12px; justify-content: center; position: relative;">
+            <div style="background: #EE9B00; padding: 10px 28px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #001219;">Quick Start</div>
+            <div style="border: 1px solid #94D2BD50; padding: 10px 28px; border-radius: 6px; font-size: 13px; color: #94D2BD;">Explore Docs</div>
+          </div>
+        </div>
+
+        <!-- PAIN POINTS — subtle, no cards, just text with accent -->
+        <div style="background: #001219; padding: 48px 40px; position: relative;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #AE2012; margin-bottom: 20px;">Data processing shouldn't feel like this</div>
+          <div style="display: flex; gap: 40px; align-items: flex-start; max-width: 600px; margin: 0 auto;">
+            <div style="flex: 1;">
+              <div style="font-size: 15px; font-weight: 600; color: #BB3E03; margin-bottom: 4px;">Memory nightmares</div>
+              <div style="font-size: 10px; color: #94D2BD80; line-height: 1.5;">Pipeline loads everything into memory, then crashes at 2 AM when someone uploads a file that's slightly too large.</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-size: 15px; font-weight: 600; color: #CA6702; margin-bottom: 4px;">Spaghetti transforms</div>
+              <div style="font-size: 10px; color: #94D2BD80; line-height: 1.5;">2,000 lines of nested loops and conditional statements that nobody wants to touch — or test.</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-size: 15px; font-weight: 600; color: #EE9B00; margin-bottom: 4px;">Silent failures</div>
+              <div style="font-size: 10px; color: #94D2BD80; line-height: 1.5;">One malformed record takes down the entire batch. Everything's wrapped in try-catch, but errors still slip through.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- A BETTER WAY — transition section -->
+        <div style="background: linear-gradient(180deg, #001219, #001a24); padding: 32px 40px; text-align: center;">
+          <div style="font-size: 22px; font-weight: 700; color: white;">A better way to process data</div>
+          <div style="font-size: 11px; color: #94D2BD; margin-top: 10px; max-width: 420px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            Graph-based architecture where data flows through discrete, testable nodes. Each piece does one thing well. Complexity emerges from composition, not accumulation.
+          </div>
+        </div>
+
+        <!-- PIPELINE FLOW — Parallax cards, organic layout -->
+        <div style="background: #001a24; padding: 40px; position: relative;">
+          <div style="display: flex; gap: 20px; align-items: center; justify-content: center; max-width: 520px; margin: 0 auto;">
+            <!-- Source Parallax card -->
+            <div style="flex: 1; background: linear-gradient(160deg, #005F73, #00121980); padding: 32px 20px; border-radius: 12px; border: 1px solid #0A939630; text-align: center; position: relative; overflow: hidden;">
+              <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background: #0A939610; border-radius: 50%;"></div>
+              <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396; margin-bottom: 8px;">✦ Parallax</div>
+              <div style="font-size: 18px; font-weight: 700; color: white; margin-bottom: 6px;">Sources</div>
+              <div style="font-size: 10px; color: #94D2BD; line-height: 1.5;">Where data enters your pipeline. Files, databases, APIs, message queues.</div>
+            </div>
+            <div style="color: #EE9B00; font-size: 24px; margin-top: -40px;">→</div>
+            <!-- Transform Parallax card -->
+            <div style="flex: 1; background: linear-gradient(160deg, #0A9396, #005F7380); padding: 32px 20px; border-radius: 12px; border: 1px solid #94D2BD20; text-align: center; position: relative; overflow: hidden;">
+              <div style="position: absolute; bottom: -10px; left: -10px; width: 50px; height: 50px; background: #94D2BD10; border-radius: 50%;"></div>
+              <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #94D2BD; margin-bottom: 8px;">✦ Parallax</div>
+              <div style="font-size: 18px; font-weight: 700; color: white; margin-bottom: 6px;">Transforms</div>
+              <div style="font-size: 10px; color: #94D2BD; line-height: 1.5;">Validate, enrich, filter, aggregate. Single-responsibility components.</div>
+            </div>
+            <div style="color: #EE9B00; font-size: 24px; margin-top: -40px;">→</div>
+            <!-- Sink Parallax card -->
+            <div style="flex: 1; background: linear-gradient(160deg, #EE9B00, #CA6702); padding: 32px 20px; border-radius: 12px; text-align: center; position: relative; overflow: hidden;">
+              <div style="position: absolute; top: -15px; left: -15px; width: 45px; height: 45px; background: #E9D8A620; border-radius: 50%;"></div>
+              <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #00121980; margin-bottom: 8px;">✦ Parallax</div>
+              <div style="font-size: 18px; font-weight: 700; color: #001219; margin-bottom: 6px;">Sinks</div>
+              <div style="font-size: 10px; color: #00121990; line-height: 1.5;">Write to databases, send to APIs, stream to files. Final delivery.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STREAMING PERFORMANCE — big numbers, gradient bg -->
+        <div style="background: linear-gradient(180deg, #001a24, #001219); padding: 40px; text-align: center;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396; margin-bottom: 20px;">Process more data than fits in memory</div>
+          <div style="display: flex; gap: 48px; justify-content: center; align-items: flex-end;">
+            <div>
+              <div style="font-size: 42px; font-weight: 700; color: #0A9396; line-height: 1;">~2MB</div>
+              <div style="font-size: 10px; color: #94D2BD; margin-top: 6px;">Streaming peak memory</div>
+              <div style="font-size: 9px; color: #AE2012; margin-top: 2px;">vs 500MB eager loading</div>
+            </div>
+            <div>
+              <div style="font-size: 42px; font-weight: 700; color: #EE9B00; line-height: 1;">&lt;1ms</div>
+              <div style="font-size: 10px; color: #E9D8A6; margin-top: 6px;">First item processed</div>
+              <div style="font-size: 9px; color: #94D2BD80; margin-top: 2px;">No waiting for full dataset</div>
+            </div>
+            <div>
+              <div style="font-size: 42px; font-weight: 700; color: #94D2BD; line-height: 1;">90%</div>
+              <div style="font-size: 10px; color: #94D2BD; margin-top: 6px;">Less GC pressure</div>
+              <div style="font-size: 9px; color: #94D2BD80; margin-top: 2px;">ValueTask fast paths</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- USE CASES — compact pills -->
+        <div style="background: #001219; padding: 32px 40px; text-align: center;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #E9D8A6; margin-bottom: 16px;">Built for</div>
+          <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <div style="background: #005F7330; border: 1px solid #005F7350; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #0A9396;">ETL Workflows</div>
+            <div style="background: #0A939630; border: 1px solid #0A939650; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #94D2BD;">Real-time Streaming</div>
+            <div style="background: #EE9B0020; border: 1px solid #EE9B0040; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #EE9B00;">Data Validation</div>
+            <div style="background: #94D2BD15; border: 1px solid #94D2BD30; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #94D2BD;">Batch Processing</div>
+            <div style="background: #CA670220; border: 1px solid #CA670240; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #CA6702;">Event-driven</div>
+            <div style="background: #BB3E0315; border: 1px solid #BB3E0330; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #BB3E03;">Microservice Integration</div>
+          </div>
+        </div>
+
+        <!-- CODE SECTION -->
+        <div style="background: #0a0f14; padding: 40px; position: relative;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396; margin-bottom: 4px; text-align: center;">Code that reads like a diagram</div>
+          <div style="font-size: 11px; color: #94D2BD80; text-align: center; margin-bottom: 20px;">The compiler enforces type safety between nodes — if it compiles, it connects.</div>
+          <div style="background: #0d1117; border-radius: 8px; padding: 20px 24px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 9px; line-height: 1.8; max-width: 420px; margin: 0 auto; border: 1px solid #005F7320;">
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">source</span> = builder.<span style="color: #EE9B00;">AddSource</span>&lt;<span style="color: #94D2BD;">OrderSource</span>, <span style="color: #94D2BD;">Order</span>&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">validate</span> = builder.<span style="color: #EE9B00;">AddTransform</span>&lt;<span style="color: #94D2BD;">ValidateOrder</span>&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">enrich</span> = builder.<span style="color: #EE9B00;">AddTransform</span>&lt;<span style="color: #94D2BD;">EnrichWithCustomer</span>&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">sink</span> = builder.<span style="color: #EE9B00;">AddSink</span>&lt;<span style="color: #94D2BD;">DatabaseSink</span>, <span style="color: #94D2BD;">EnrichedOrder</span>&gt;();</div>
+            <div style="margin-top: 8px; color: #005F73;">// Connect the graph — types must match</div>
+            <div>builder.<span style="color: #EE9B00;">Connect</span>(source, validate);</div>
+            <div>builder.<span style="color: #EE9B00;">Connect</span>(validate, enrich);</div>
+            <div>builder.<span style="color: #EE9B00;">Connect</span>(enrich, sink);</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="background: linear-gradient(170deg, #0A9396 0%, #005F73 60%, #001219 100%); padding: 60px 40px; text-align: center;">
+          <div style="font-size: 24px; font-weight: 700; color: white; margin-bottom: 8px;">Ready to build better pipelines?</div>
+          <div style="font-size: 11px; color: #94D2BD; margin-bottom: 24px;">Get started in minutes. Build your first pipeline in 15.</div>
+          <div style="background: #001219; padding: 10px 28px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #0A9396; display: inline-block; margin-bottom: 16px;">dotnet add package NPipeline</div>
+          <div style="margin-top: 12px; display: flex; gap: 12px; justify-content: center;">
+            <div style="background: #EE9B00; padding: 10px 28px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #001219;">Getting Started</div>
+            <div style="border: 1px solid #94D2BD50; padding: 10px 28px; border-radius: 6px; font-size: 13px; color: #94D2BD;">Explore Core Concepts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Refined: Filigran-Inspired Flow</h3>
+      <p>Full-bleed gradient sections, large varied typography, organic content flow, no visible card borders. Parallax used on the 3 pipeline concept cards. Stats as big centered numbers. Pills for use cases. Code block with syntax coloring.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="refined-b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: #001219; padding: 0; border-radius: 12px; overflow: hidden; min-height: 700px; display: flex; flex-direction: column;">
+
+        <!-- NAV -->
+        <div style="background: #001219ee; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #005F7330;">
+          <div style="font-size: 14px; font-weight: 700; color: #0A9396; letter-spacing: 1px;">NPipeline</div>
+          <div style="display: flex; gap: 18px; align-items: center;">
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Features</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Performance</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Code</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Docs</div>
+            <div style="background: #0A9396; padding: 5px 14px; border-radius: 5px; font-size: 9px; font-weight: 600; color: white;">Get Started</div>
+          </div>
+        </div>
+
+        <!-- HERO — split layout, code on right -->
+        <div style="background: linear-gradient(160deg, #001219 0%, #005F73 50%, #0A9396 100%); padding: 48px 40px; display: flex; gap: 32px; align-items: center;">
+          <div style="flex: 1;">
+            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 3px; color: #94D2BD; margin-bottom: 12px;">High-Performance · Type-Safe · Streaming</div>
+            <div style="font-size: 28px; font-weight: 700; color: white; line-height: 1.15;">
+              Data Pipelines<br><span style="color: #E9D8A6;">That Don't Break</span>
+            </div>
+            <div style="font-size: 11px; color: #94D2BD; margin-top: 14px; line-height: 1.6;">
+              Build robust, graph-based streaming workflows in C# with type safety, constant memory, and zero-allocation fast paths.
+            </div>
+            <div style="margin-top: 24px; display: flex; gap: 12px;">
+              <div style="background: #EE9B00; padding: 10px 28px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #001219;">Quick Start</div>
+              <div style="border: 1px solid #94D2BD50; padding: 10px 28px; border-radius: 6px; font-size: 13px; color: #94D2BD;">View Docs</div>
+            </div>
+          </div>
+          <div style="flex: 0.8; background: #0d1117; border-radius: 10px; padding: 18px; font-family: 'SF Mono', monospace; font-size: 8px; line-height: 1.8; border: 1px solid #0A939630;">
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">source</span> = builder.<span style="color: #EE9B00;">AddSource</span>&lt;OrderSource&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">validate</span> = builder.<span style="color: #EE9B00;">AddTransform</span>&lt;ValidateOrder&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">sink</span> = builder.<span style="color: #EE9B00;">AddSink</span>&lt;DatabaseSink&gt;();</div>
+            <div style="margin-top: 6px; color: #005F73;">builder.Connect(source, validate);</div>
+            <div>builder.Connect(validate, sink);</div>
+          </div>
+        </div>
+
+        <!-- PAIN POINTS — horizontal, subtle border-left accent -->
+        <div style="background: #001219; padding: 40px; display: flex; gap: 24px;">
+          <div style="flex: 1; border-left: 3px solid #AE2012; padding-left: 16px;">
+            <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #BB3E03; margin-bottom: 6px;">Problem</div>
+            <div style="font-size: 14px; font-weight: 600; color: #BB3E03;">Memory nightmares</div>
+            <div style="font-size: 10px; color: #94D2BD80; margin-top: 4px; line-height: 1.5;">Pipeline loads everything into memory, crashes at 2 AM on a slightly larger file.</div>
+          </div>
+          <div style="flex: 1; border-left: 3px solid #CA6702; padding-left: 16px;">
+            <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #CA6702; margin-bottom: 6px;">Problem</div>
+            <div style="font-size: 14px; font-weight: 600; color: #CA6702;">Spaghetti transforms</div>
+            <div style="font-size: 10px; color: #94D2BD80; margin-top: 4px; line-height: 1.5;">2,000 lines of nested loops and conditionals that nobody wants to test.</div>
+          </div>
+          <div style="flex: 1; border-left: 3px solid #EE9B00; padding-left: 16px;">
+            <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #EE9B00; margin-bottom: 6px;">Problem</div>
+            <div style="font-size: 14px; font-weight: 600; color: #EE9B00;">Silent failures</div>
+            <div style="font-size: 10px; color: #94D2BD80; margin-top: 4px; line-height: 1.5;">One malformed record poisons the batch. try-catch everywhere, errors still escape.</div>
+          </div>
+        </div>
+
+        <!-- PIPELINE FLOW — horizontal Parallax cards with arrows -->
+        <div style="background: linear-gradient(180deg, #001219, #001a24); padding: 48px 40px; text-align: center;">
+          <div style="font-size: 20px; font-weight: 700; color: white; margin-bottom: 6px;">A better way to process data</div>
+          <div style="font-size: 11px; color: #94D2BD; margin-bottom: 32px;">Graph-based architecture — complexity from composition, not accumulation.</div>
+          <div style="display: flex; gap: 16px; align-items: center; justify-content: center; max-width: 520px; margin: 0 auto;">
+            <div style="flex: 1; background: linear-gradient(160deg, #005F73, #00121980); padding: 28px 16px; border-radius: 10px; border: 1px solid #0A939630; text-align: center;">
+              <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396; margin-bottom: 8px;">✦ Parallax</div>
+              <div style="font-size: 16px; font-weight: 700; color: white;">Sources</div>
+              <div style="font-size: 9px; color: #94D2BD; margin-top: 6px; line-height: 1.4;">Files, databases,<br>APIs, queues</div>
+            </div>
+            <div style="color: #EE9B00; font-size: 18px;">→</div>
+            <div style="flex: 1; background: linear-gradient(160deg, #0A9396, #005F7380); padding: 28px 16px; border-radius: 10px; border: 1px solid #94D2BD20; text-align: center;">
+              <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #94D2BD; margin-bottom: 8px;">✦ Parallax</div>
+              <div style="font-size: 16px; font-weight: 700; color: white;">Transforms</div>
+              <div style="font-size: 9px; color: #94D2BD; margin-top: 6px; line-height: 1.4;">Validate, enrich,<br>filter, aggregate</div>
+            </div>
+            <div style="color: #EE9B00; font-size: 18px;">→</div>
+            <div style="flex: 1; background: linear-gradient(160deg, #EE9B00, #CA6702); padding: 28px 16px; border-radius: 10px; text-align: center;">
+              <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #00121980; margin-bottom: 8px;">✦ Parallax</div>
+              <div style="font-size: 16px; font-weight: 700; color: #001219;">Sinks</div>
+              <div style="font-size: 9px; color: #00121990; margin-top: 6px; line-height: 1.4;">Databases, APIs,<br>files, streams</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATS — side by side, big -->
+        <div style="background: #001a24; padding: 56px 48px; display: flex; gap: 60px; justify-content: center;">
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 800; color: #0A9396; line-height: 1;">~2MB</div>
+            <div style="font-size: 11px; color: #94D2BD; margin-top: 8px;">Peak memory (streaming)</div>
+            <div style="font-size: 10px; color: #9B2226; margin-top: 2px;">vs 500MB eager loading</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 800; color: #EE9B00; line-height: 1;">&lt;1ms</div>
+            <div style="font-size: 11px; color: #E9D8A6; margin-top: 8px;">Time to first item</div>
+            <div style="font-size: 10px; color: #94D2BD80; margin-top: 2px;">Start processing immediately</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 48px; font-weight: 800; color: #94D2BD; line-height: 1;">90%</div>
+            <div style="font-size: 11px; color: #94D2BD; margin-top: 8px;">Less GC pressure</div>
+            <div style="font-size: 10px; color: #94D2BD80; margin-top: 2px;">ValueTask fast paths</div>
+          </div>
+        </div>
+
+        <!-- USE CASES as pills -->
+        <div style="background: #001219; padding: 36px 40px; text-align: center;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #E9D8A6; margin-bottom: 16px;">Built for these problems</div>
+          <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <div style="background: #005F7330; border: 1px solid #005F7350; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #0A9396;">ETL Workflows</div>
+            <div style="background: #0A939630; border: 1px solid #0A939650; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #94D2BD;">Real-time Streaming</div>
+            <div style="background: #EE9B0020; border: 1px solid #EE9B0040; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #EE9B00;">Data Validation</div>
+            <div style="background: #94D2BD15; border: 1px solid #94D2BD30; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #94D2BD;">Batch Processing</div>
+            <div style="background: #CA670220; border: 1px solid #CA670240; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #CA6702;">Event-driven</div>
+            <div style="background: #BB3E0315; border: 1px solid #BB3E0330; padding: 8px 20px; border-radius: 20px; font-size: 10px; color: #BB3E03;">Microservice Integration</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="background: linear-gradient(170deg, #0A9396, #005F73 60%, #001219); padding: 60px 40px; text-align: center;">
+          <div style="font-size: 24px; font-weight: 700; color: white; margin-bottom: 8px;">Ready to build better pipelines?</div>
+          <div style="font-size: 11px; color: #94D2BD; margin-bottom: 24px;">Get started in minutes. Build your first pipeline in 15.</div>
+          <div style="background: #0d1117; padding: 10px 28px; border-radius: 6px; font-size: 13px; font-family: monospace; color: #0A9396; display: inline-block; margin-bottom: 16px;">dotnet add package NPipeline</div>
+          <div style="margin-top: 12px; display: flex; gap: 12px; justify-content: center;">
+            <div style="background: #EE9B00; padding: 10px 28px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #001219;">Getting Started</div>
+            <div style="border: 1px solid #94D2BD50; padding: 10px 28px; border-radius: 6px; font-size: 13px; color: #94D2BD;">Core Concepts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Refined: Split Hero + Horizontal Flow</h3>
+      <p>Hero has code on the right (Filigran-style split). Pain points use border-left accents instead of cards. Pipeline flow is simpler. Stats are big centered numbers. Same flowing sections but more variety in layout.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="refined-c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background: #001219; padding: 0; border-radius: 12px; overflow: hidden; min-height: 700px; display: flex; flex-direction: column;">
+
+        <!-- NAV -->
+        <div style="background: #001219ee; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #005F7330;">
+          <div style="font-size: 14px; font-weight: 700; color: #0A9396; letter-spacing: 1px;">NPipeline</div>
+          <div style="display: flex; gap: 18px; align-items: center;">
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Features</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Performance</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Code</div>
+            <div style="font-size: 9px; color: #94D2BD; text-transform: uppercase; letter-spacing: 1px;">Docs</div>
+            <div style="background: #0A9396; padding: 5px 14px; border-radius: 5px; font-size: 9px; font-weight: 600; color: white;">Get Started</div>
+          </div>
+        </div>
+
+        <!-- HERO — centred, dramatic -->
+        <div style="background: linear-gradient(170deg, #001219 0%, #005F73 60%, #0A9396 100%); padding: 72px 40px; text-align: center; position: relative;">
+          <div style="position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 500px; height: 500px; background: radial-gradient(circle, #0A939615 0%, transparent 70%); border-radius: 50%;"></div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 4px; color: #94D2BD; margin-bottom: 20px; position: relative;">Streaming Data Pipelines in .NET</div>
+          <div style="font-size: 38px; font-weight: 800; color: white; line-height: 1.1; position: relative;">
+            Process More Data<br>Than Fits In Memory
+          </div>
+          <div style="font-size: 13px; color: #94D2BD; margin-top: 18px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.6; position: relative;">
+            Type-safe C# with DAG architecture. Constant memory. Zero-allocation fast paths. Built for the real world.
+          </div>
+          <div style="margin-top: 32px; display: flex; gap: 14px; justify-content: center; position: relative;">
+            <div style="background: #EE9B00; padding: 12px 32px; border-radius: 6px; font-size: 14px; font-weight: 600; color: #001219;">Get Started</div>
+            <div style="border: 1px solid #94D2BD50; padding: 12px 32px; border-radius: 6px; font-size: 14px; color: #94D2BD;">View Docs</div>
+          </div>
+        </div>
+
+        <!-- PAIN POINTS — large contrast section -->
+        <div style="background: #000a10; padding: 52px 40px;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #AE2012; margin-bottom: 24px;">Data processing in .NET shouldn't feel like this</div>
+          <div style="display: flex; gap: 48px; margin-bottom: 32px;">
+            <div style="flex: 1;">
+              <div style="font-size: 22px; font-weight: 700; color: #BB3E03; margin-bottom: 6px; line-height: 1.2;">Memory<br>nightmares</div>
+              <div style="font-size: 11px; color: #94D2BD60; line-height: 1.6;">Your pipeline loads everything into memory, then crashes at 2 AM when someone uploads a slightly larger file.</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-size: 22px; font-weight: 700; color: #CA6702; margin-bottom: 6px; line-height: 1.2;">Spaghetti<br>transforms</div>
+              <div style="font-size: 11px; color: #94D2BD60; line-height: 1.6;">2,000 lines of nested loops and conditionals that nobody wants to touch — or test.</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-size: 22px; font-weight: 700; color: #EE9B00; margin-bottom: 6px; line-height: 1.2;">Silent<br>failures</div>
+              <div style="font-size: 11px; color: #94D2BD60; line-height: 1.6;">One malformed record takes down an entire batch. Wrapped in try-catch, errors still slip through.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PARALLAX FEATURE SHOWCASE — 3 large floating cards -->
+        <div style="background: linear-gradient(180deg, #000a10, #001219); padding: 48px 32px;">
+          <div style="text-align: center; margin-bottom: 32px;">
+            <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396; margin-bottom: 8px;">A better way</div>
+            <div style="font-size: 22px; font-weight: 700; color: white;">Data flows through discrete, testable nodes</div>
+          </div>
+          <div style="display: flex; gap: 16px; max-width: 540px; margin: 0 auto;">
+            <!-- Source -->
+            <div style="flex: 1; background: linear-gradient(160deg, #005F73, #00121990); padding: 36px 18px; border-radius: 10px; border: 1px solid #0A939630; text-align: center; position: relative; overflow: hidden;">
+              <div style="position: absolute; top: -30px; right: -30px; width: 80px; height: 80px; background: #0A939615; border-radius: 50%;"></div>
+              <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396; margin-bottom: 10px;">✦ Parallax</div>
+              <div style="font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px;">Sources</div>
+              <div style="font-size: 9px; color: #94D2BD; line-height: 1.5;">Where data enters. Files, databases, APIs, message queues.</div>
+            </div>
+            <!-- Transform -->
+            <div style="flex: 1; background: linear-gradient(160deg, #0A9396, #005F7390); padding: 36px 18px; border-radius: 10px; border: 1px solid #94D2BD20; text-align: center; position: relative; overflow: hidden; transform: translateY(-12px);">
+              <div style="position: absolute; bottom: -20px; left: -20px; width: 70px; height: 70px; background: #94D2BD10; border-radius: 50%;"></div>
+              <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #94D2BD; margin-bottom: 10px;">✦ Parallax</div>
+              <div style="font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px;">Transforms</div>
+              <div style="font-size: 9px; color: #94D2BD; line-height: 1.5;">Process & reshape. Validate, enrich, filter, aggregate.</div>
+            </div>
+            <!-- Sink -->
+            <div style="flex: 1; background: linear-gradient(160deg, #EE9B00, #CA6702); padding: 36px 18px; border-radius: 10px; text-align: center; position: relative; overflow: hidden;">
+              <div style="position: absolute; top: -20px; left: -20px; width: 60px; height: 60px; background: #E9D8A615; border-radius: 50%;"></div>
+              <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #00121980; margin-bottom: 10px;">✦ Parallax</div>
+              <div style="font-size: 20px; font-weight: 700; color: #001219; margin-bottom: 8px;">Sinks</div>
+              <div style="font-size: 9px; color: #001219aa; line-height: 1.5;">Where data lands. Databases, APIs, files.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERFORMANCE — big numbers centered -->
+        <div style="background: #001219; padding: 56px 40px; text-align: center;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396; margin-bottom: 28px;">Real numbers, real impact</div>
+          <div style="display: flex; gap: 64px; justify-content: center;">
+            <div>
+              <div style="font-size: 56px; font-weight: 800; color: #0A939650; line-height: 1;">~2<span style="color: #0A9396;">MB</span></div>
+              <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">Streaming peak memory</div>
+              <div style="font-size: 10px; color: #9B2226;">vs 500MB eager</div>
+            </div>
+            <div>
+              <div style="font-size: 56px; font-weight: 800; color: #EE9B0050; line-height: 1;">&lt;1<span style="color: #EE9B00;">ms</span></div>
+              <div style="font-size: 11px; color: #E9D8A6; margin-top: 4px;">First item latency</div>
+              <div style="font-size: 10px; color: #94D2BD60;">No full-dataset wait</div>
+            </div>
+            <div>
+              <div style="font-size: 56px; font-weight: 800; color: #94D2BD50; line-height: 1;">90<span style="color: #94D2BD;">%</span></div>
+              <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">Less GC pressure</div>
+              <div style="font-size: 10px; color: #94D2BD60;">ValueTask fast paths</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CODE -->
+        <div style="background: #0a0f14; padding: 48px 40px;">
+          <div style="text-align: center; margin-bottom: 20px;">
+            <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #0A9396;">Code that reads like a diagram</div>
+            <div style="font-size: 11px; color: #94D2BD80; margin-top: 4px;">The compiler enforces type safety — if it compiles, it connects</div>
+          </div>
+          <div style="background: #0d1117; border-radius: 8px; padding: 24px; font-family: 'SF Mono', monospace; font-size: 9px; line-height: 1.9; max-width: 400px; margin: 0 auto; border: 1px solid #005F7320;">
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">source</span> = builder.<span style="color: #EE9B00;">AddSource</span>&lt;<span style="color: #94D2BD;">OrderSource</span>, <span style="color: #94D2BD;">Order</span>&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">validate</span> = builder.<span style="color: #EE9B00;">AddTransform</span>&lt;<span style="color: #94D2BD;">ValidateOrder</span>&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">enrich</span> = builder.<span style="color: #EE9B00;">AddTransform</span>&lt;<span style="color: #94D2BD;">EnrichWithCustomer</span>&gt;();</div>
+            <div><span style="color: #0A9396;">var</span> <span style="color: #E9D8A6;">sink</span> = builder.<span style="color: #EE9B00;">AddSink</span>&lt;<span style="color: #94D2BD;">DatabaseSink</span>, <span style="color: #94D2BD;">EnrichedOrder</span>&gt;();</div>
+            <div style="margin-top: 8px; color: #005F73;">// Types must match — compiler enforced</div>
+            <div>builder.<span style="color: #EE9B00;">Connect</span>(source, validate);</div>
+            <div>builder.<span style="color: #EE9B00;">Connect</span>(validate, enrich);</div>
+            <div>builder.<span style="color: #EE9B00;">Connect</span>(enrich, sink);</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="background: linear-gradient(170deg, #0A9396, #005F73 60%, #001219); padding: 64px 40px; text-align: center;">
+          <div style="font-size: 26px; font-weight: 700; color: white; margin-bottom: 10px;">Ready to build better pipelines?</div>
+          <div style="font-size: 12px; color: #94D2BD; margin-bottom: 24px;">Get started in minutes. Build your first pipeline in 15.</div>
+          <div style="background: #0d1117; padding: 10px 28px; border-radius: 6px; font-size: 14px; font-family: monospace; color: #0A9396; display: inline-block; margin-bottom: 16px;">dotnet add package NPipeline</div>
+          <div style="margin-top: 14px; display: flex; gap: 12px; justify-content: center;">
+            <div style="background: #EE9B00; padding: 12px 32px; border-radius: 6px; font-size: 14px; font-weight: 600; color: #001219;">Getting Started</div>
+            <div style="border: 1px solid #94D2BD50; padding: 12px 32px; border-radius: 6px; font-size: 14px; color: #94D2BD;">Core Concepts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Refined: Dramatic + Staggered Cards</h3>
+      <p>Large centered hero with bigger typography. Ultra-dark pain points section with large headlines. Parallax cards staggered (middle card offset up). Extra-large stats with faded color. More Filigran-like dramatic contrast.</p>
+    </div>
+  </div>
+</div>

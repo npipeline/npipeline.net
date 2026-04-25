@@ -1,0 +1,158 @@
+<h2>Final Design: NPipeline Homepage</h2>
+<p class="subtitle">Refined B — Split Hero + Horizontal Flow. Full design specification below.</p>
+
+<div class="section">
+  <h3>Overall Visual Language</h3>
+  <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 200px;">
+      <div style="font-size: 11px; font-weight: 600; margin-bottom: 8px;">Color palette</div>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #001219; border: 1px solid #ffffff20;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #005F73;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #0A9396;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #94D2BD;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #E9D8A6;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #EE9B00;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #CA6702;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #BB3E03;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #AE2012;"></div>
+        <div style="width: 40px; height: 40px; border-radius: 6px; background: #9B2226;"></div>
+      </div>
+    </div>
+    <div style="flex: 1; min-width: 200px;">
+      <div style="font-size: 11px; font-weight: 600; margin-bottom: 8px;">Design principles</div>
+      <ul style="font-size: 12px; color: #94D2BD; line-height: 1.8; padding-left: 16px;">
+        <li>Dark immersive (#001219 base) — Filigran-inspired</li>
+        <li>Small radius (6px default) — per user preference</li>
+        <li>Full-bleed sections, no visible card borders</li>
+        <li>Large varied typography, generous whitespace</li>
+        <li>Parallax on hero + feature cards</li>
+      </ul>
+    </div>
+    <div style="flex: 1; min-width: 200px;">
+      <div style="font-size: 11px; font-weight: 600; margin-bottom: 8px;">Color usage</div>
+      <ul style="font-size: 12px; color: #94D2BD; line-height: 1.8; padding-left: 16px;">
+        <li><strong style="color: #0A9396;">#0A9396</strong> — Primary accent, headings, links</li>
+        <li><strong style="color: #EE9B00;">#EE9B00</strong> — CTAs, highlights, warm accent</li>
+        <li><strong style="color: #94D2BD;">#94D2BD</strong> — Secondary text, body copy</li>
+        <li><strong style="color: #E9D8A6;">#E9D8A6</strong> — Highlighted text, emphasis</li>
+        <li><strong style="color: #BB3E03;">#BB3E03 → #9B2226</strong> — Pain points, errors</li>
+        <li><strong style="color: #005F73;">#005F73</strong> — Gradients, subtle backgrounds</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 32px;">
+  <h3>Page Sections (top to bottom)</h3>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #0A9396;">
+    <div style="font-size: 12px; font-weight: 600; color: #0A9396;">1. Sticky Header</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      Logo | Features | Performance | Code | Docs | <strong>Get Started</strong> button (#0A9396 bg)<br>
+      Mantine AppShell header, position sticky, backdrop blur, glass effect on scroll
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #005F73;">
+    <div style="font-size: 12px; font-weight: 600; color: #005F73;">2. Hero (Split Layout)</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      <strong>Left:</strong> Tagline "Data Pipelines That Don't Break", subtitle, Quick Start + View Docs buttons<br>
+      <strong>Right:</strong> Syntax-highlighted code snippet in dark terminal card<br>
+      <strong>BG:</strong> Gradient #001219 → #005F73 → #0A9396<br>
+      Mantine Parallax on the hero container for subtle 3D tilt on hover
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #AE2012;">
+    <div style="font-size: 12px; font-weight: 600; color: #AE2012;">3. Pain Points</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      Three columns, each with border-left accent color (#9B2226, #CA6702, #EE9B00)<br>
+      "Memory nightmares", "Spaghetti transforms", "Silent failures"<br>
+      Section label "Data processing in .NET shouldn't feel like this"<br>
+      Background: #001219, no cards, just text with accent borders
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #0A9396;">
+    <div style="font-size: 12px; font-weight: 600; color: #0A9396;">4. Pipeline Flow (Parallax Cards)</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      Section header "A better way to process data" + subtitle<br>
+      Three Parallax cards in a row: Sources → Transforms → Sinks<br>
+      Connected by → arrows (#EE9B00)<br>
+      Each card: gradient bg, title, description, Parallax hover effect<br>
+      BG: gradient #001219 → #001a24
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #EE9B00;">
+    <div style="font-size: 12px; font-weight: 600; color: #EE9B00;">5. Streaming Performance</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      Large centered stats: ~2MB / &lt;1ms / 90%<br>
+      Each with primary stat in accent color + subtitle + comparison note<br>
+      BG: #001a24, generous padding
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #E9D8A6;">
+    <div style="font-size: 12px; font-weight: 600; color: #E9D8A6;">6. Resilience (Parallax Card)</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      Single large Parallax card showcasing error handling features<br>
+      Retry policies, circuit breakers, granular error handling<br>
+      BG: #001219
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #94D2BD;">
+    <div style="font-size: 12px; font-weight: 600; color: #94D2BD;">7. Use Cases</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      "Built for these problems" label<br>
+      Six pill/badge items: ETL, Real-time, Validation, Batch, Event-driven, Microservices<br>
+      Each pill tinted with palette color border + text<br>
+      BG: #001219
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #0A9396;">
+    <div style="font-size: 12px; font-weight: 600; color: #0A9396;">8. Modular Features</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      Grid of 8 feature briefs: Composition, Connectors, DI, Lineage, Nodes, Observability, Parallelism, Testing<br>
+      Simple icon + title + one-liner, no card borders, just subtle bg tint<br>
+      BG: #0a0f14
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #0A9396;">
+    <div style="font-size: 12px; font-weight: 600; color: #0A9396;">9. Code Example</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      "Code that reads like a diagram" heading<br>
+      Syntax-highlighted code block with NPipeline fluent API<br>
+      Dark terminal-style card (#0d1117 bg)<br>
+      BG: #0a0f14
+    </div>
+  </div>
+
+  <div style="background: #001219; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 3px solid #005F73;">
+    <div style="font-size: 12px; font-weight: 600; color: #005F73;">10. CTA Footer Section</div>
+    <div style="font-size: 11px; color: #94D2BD; margin-top: 4px;">
+      "Ready to build better pipelines?" heading<br>
+      dotnet add package NPipeline command in dark box<br>
+      Getting Started + Core Concepts buttons<br>
+      BG: gradient #0A9396 → #005F73 → #001219
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 24px;">
+  <h3>Technical Architecture</h3>
+  <div style="font-size: 12px; color: #94D2BD; line-height: 1.8;">
+    <ul style="padding-left: 16px;">
+      <li><strong>Framework:</strong> React Router v7 + Mantine 9 + @gfazioli/mantine-parallax</li>
+      <li><strong>Theme:</strong> Mantine createTheme with palette colors, defaultRadius "sm" (smaller corners)</li>
+      <li><strong>Layout:</strong> Single-page scroll with section components in app/sections/</li>
+      <li><strong>Parallax:</strong> Used on hero container, 3 pipeline cards, resilience card</li>
+      <li><strong>Navigation:</strong> Mantine AppShell with sticky header + anchor links</li>
+      <li><strong>Animations:</strong> Mantine Parallax for 3D hover, scroll-based background shifts via useWindowScroll</li>
+    </ul>
+  </div>
+</div>
