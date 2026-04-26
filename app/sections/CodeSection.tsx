@@ -25,7 +25,7 @@ const codeBlock = `public void Define(PipelineBuilder builder, PipelineContext c
 
 export function CodeSection() {
   return (
-    <Box component="section" py={{ base: 30, md: 60 }} bg="#F8F9FA">
+    <Box component="section" id="dx" py={{ base: 30, md: 60 }} bg="#F8F9FA">
       <Container size="lg">
         <ScrollReveal>
           <SectionHeader label="Developer Experience" />

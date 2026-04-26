@@ -24,9 +24,6 @@ export default function HomePage() {
         <Box id="better-way">
           <BetterWaySection />
         </Box>
-        <Box id="studio">
-          <StudioSection />
-        </Box>
         <Box id="performance">
           <PerformanceSection />
         </Box>
@@ -40,9 +37,10 @@ export default function HomePage() {
         <ExtensionsSection />
         <CodeSection />
         <TestingSection />
-        <Box id="getting-started">
-          <CTASection />
+        <Box id="studio">
+          <StudioSection />
         </Box>
+        <CTASection />
       </Box>
       <Footer />
     </>

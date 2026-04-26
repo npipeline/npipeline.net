@@ -25,7 +25,7 @@ const modules = [
 
 export function ExtensionsSection() {
   return (
-    <Box component="section" py={{ base: 30, md: 60 }} bg="white">
+    <Box component="section" id="extensions" py={{ base: 30, md: 60 }} bg="white">
       <Container size="lg">
         <ScrollReveal>
           <SectionHeader label="Extensions" />

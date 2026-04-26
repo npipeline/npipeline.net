@@ -1,4 +1,12 @@
-import { Box, Container, Title, Text, Button, Group, Stack } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Title,
+  Text,
+  Button,
+  Group,
+  Stack,
+} from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
 import { PlaceholderImage } from "~/components/PlaceholderImage";
 import { SectionHeader } from "~/components/SectionHeader";
@@ -12,8 +20,16 @@ export function StudioSection() {
           <SectionHeader label="Visual Debugging" />
         </ScrollReveal>
         <ScrollReveal delay={80}>
-          <Title order={2} ta="center" mb="xl" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+          <Title
+            order={2}
+            ta="center"
+            //mb="xl"
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
+          >
             NPipeline Studio
+          </Title>
+          <Title order={3} ta="center" c="dimmed" mb="xl" maw={600} mx="auto">
+            Coming soon
           </Title>
         </ScrollReveal>
 
@@ -26,10 +42,13 @@ export function StudioSection() {
             <Stack gap="xl">
               <Box>
                 <Title order={3} mb="sm">
-                  See your pipeline as it runs
+                  Visual debugging for NPipeline
                 </Title>
                 <Text size="lg" c="dimmed" maw={600}>
-                  Stop debugging in the dark. NPipeline Studio provides a high-fidelity window into your runtime, allowing you to observe data flow and inspect state as it happens. Bridge the gap between code and execution to build resilient pipelines with total clarity.
+                  NPipeline Studio is a local real-time pipeline monitoring and
+                  debugging tool. Developers building complex workflows with
+                  NPipeline get immediate insight into what's happening, where
+                  bottlenecks occur, and why things fail.
                 </Text>
               </Box>
 
@@ -45,14 +64,19 @@ export function StudioSection() {
                 }}
               />
 
-              <Group gap="md">
-                <Button size="md" rightSection={<IconChevronRight size={18} />} color="teal" radius="sm">
+              {/* <Group gap="md">
+                <Button
+                  size="md"
+                  rightSection={<IconChevronRight size={18} />}
+                  color="teal"
+                  radius="sm"
+                >
                   Learn more about Studio
                 </Button>
                 <Button size="md" variant="default" radius="sm">
                   Try the demo
                 </Button>
-              </Group>
+              </Group> */}
             </Stack>
           </Box>
         </ScrollReveal>
