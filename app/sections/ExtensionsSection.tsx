@@ -23,12 +23,12 @@ const modules = [
   { icon: IconTestPipe, title: "Testing", description: "Comprehensive utilities and helpers for writing efficient tests. In-memory sources, sinks, and assertion helpers." },
 ];
 
-export function ModularSection() {
+export function ExtensionsSection() {
   return (
     <Box component="section" py={{ base: 30, md: 60 }} bg="white">
       <Container size="lg">
         <ScrollReveal>
-          <SectionHeader label="Modules" />
+          <SectionHeader label="Extensions" />
         </ScrollReveal>
         <ScrollReveal delay={80}>
           <Title order={2} ta="center" mb="xs" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>

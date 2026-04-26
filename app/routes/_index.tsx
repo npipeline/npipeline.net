@@ -8,7 +8,7 @@ import { PerformanceSection } from "~/sections/PerformanceSection";
 import { FastPathsSection } from "~/sections/FastPathsSection";
 import { ResilienceSection } from "~/sections/ResilienceSection";
 import { UseCasesSection } from "~/sections/UseCasesSection";
-import { ModularSection } from "~/sections/ModularSection";
+import { ExtensionsSection } from "~/sections/ExtensionsSection";
 import { CodeSection } from "~/sections/CodeSection";
 import { TestingSection } from "~/sections/TestingSection";
 import { CTASection } from "~/sections/CTASection";
@@ -37,7 +37,7 @@ export default function HomePage() {
         <Box id="features">
           <UseCasesSection />
         </Box>
-        <ModularSection />
+        <ExtensionsSection />
         <CodeSection />
         <TestingSection />
         <Box id="getting-started">
