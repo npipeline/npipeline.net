@@ -46,7 +46,7 @@ export function HeroSection() {
             >
               Why NPipeline?
             </Button>
-            <Button size="lg" variant="default" radius="sm" component="a" href="#getting-started">
+            <Button size="lg" variant="default" radius="sm" component="a" href="https://docs.npipeline.net/getting-started/quick-start">
               Quick Start
             </Button>
           </Group>

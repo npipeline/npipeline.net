@@ -226,7 +226,7 @@ export function Header() {
             color="teal"
             radius="sm"
             component="a"
-            href="#getting-started"
+            href="https://docs.npipeline.net/getting-started/"
             onClick={close}
           >
             Get Started

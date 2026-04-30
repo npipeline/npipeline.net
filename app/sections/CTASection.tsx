@@ -28,11 +28,11 @@ export function CTASection() {
                   color="teal"
                   radius="sm"
                   component="a"
-                  href="#getting-started"
+                  href="https://docs.npipeline.net/getting-started/"
                 >
                   Getting Started
                 </Button>
-                <Button size="lg" variant="default" radius="sm" component="a" href="#core-concepts">
+                <Button size="lg" variant="default" radius="sm" component="a" href="https://docs.npipeline.net/core-concepts/">
                   Explore Core Concepts
                 </Button>
               </Group>
