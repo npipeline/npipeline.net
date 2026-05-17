@@ -33,7 +33,7 @@ export function CTASection() {
                   Getting Started
                 </Button>
                 <Button size="lg" variant="default" radius="sm" component="a" href="https://docs.npipeline.net/getting-started/key-concepts">
-                  Explore Core Concepts
+                  Explore Key Concepts
                 </Button>
               </Group>
             </Stack>
