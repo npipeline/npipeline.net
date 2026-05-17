@@ -75,7 +75,7 @@ export function HeroSection() {
               variant="default"
               radius="sm"
               component="a"
-              href="https://docs.npipeline.net/getting-started/quick-start"
+              href="https://docs.npipeline.net/getting-started/your-first-pipeline"
             >
               Quick Start
             </Button>
