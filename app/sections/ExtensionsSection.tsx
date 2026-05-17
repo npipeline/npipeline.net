@@ -8,6 +8,7 @@ import {
   IconTestPipe,
   IconSearch,
   IconPackages,
+  IconRobot,
 } from "@tabler/icons-react";
 import { SectionHeader } from "~/components/SectionHeader";
 import { ScrollReveal } from "~/components/ScrollReveal";
@@ -21,6 +22,7 @@ const modules = [
   { icon: IconSearch, title: "Observability", description: "Comprehensive metrics collection and monitoring. Track throughput, memory usage, retries, and errors." },
   { icon: IconCpu, title: "Parallelism", description: "Execute pipeline nodes in parallel. Configurable concurrency limits, queue policies, and ordering behaviour." },
   { icon: IconTestPipe, title: "Testing", description: "Comprehensive utilities and helpers for writing efficient tests. In-memory sources, sinks, and assertion helpers." },
+  { icon: IconRobot, title: "AI", description: "LLM-powered transform and enrichment nodes. Classify, summarise, and route streaming data using OpenAI, Azure, Ollama, or any IChatClient." },
 ];
 
 export function ExtensionsSection() {
@@ -41,7 +43,7 @@ export function ExtensionsSection() {
           </Text>
         </ScrollReveal>
 
-        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg" style={{ gridAutoRows: "1fr" }}>
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg" style={{ gridAutoRows: "1fr" }}>
           {modules.map((m, i) => (
             <ScrollReveal key={m.title} delay={i * 80}>
               <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0", height: "100%" }}>

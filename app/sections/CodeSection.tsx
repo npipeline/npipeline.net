@@ -11,16 +11,17 @@ const codeBlock = `public void Define(PipelineBuilder builder, PipelineContext c
     var enrich = builder.AddTransform<EnrichWithCustomer, Order, EnrichedOrder>();
     var sink = builder.AddSink<DatabaseSink, EnrichedOrder>();
 
-    // Connect the graph — types must match
+    // Connect the graph - types must match
     builder.Connect(source, validate);
     builder.Connect(validate, enrich);
     builder.Connect(enrich, sink);
 
     // Add resilience
-    builder.WithRetryOptions(new PipelineRetryOptions(
-        MaxItemRetries: 3,
-        MaxNodeRestartAttempts: 2
-    ));
+    builder.WithRetryOptions(options => options with
+    {
+        MaxItemRetries = 3,
+        MaxNodeRestartAttempts = 2
+    });
 }`;
 
 export function CodeSection() {
@@ -31,13 +32,20 @@ export function CodeSection() {
           <SectionHeader label="Developer Experience" />
         </ScrollReveal>
         <ScrollReveal delay={80}>
-          <Title order={2} ta="center" mb="xs" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+          <Title
+            order={2}
+            ta="center"
+            mb="xs"
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
+          >
             Code that reads like a diagram
           </Title>
         </ScrollReveal>
         <ScrollReveal delay={160}>
           <Text ta="center" maw={640} mx="auto" mb="xl" c="dimmed">
-            NPipeline's fluent API makes your pipeline structure visible in your code. The compiler enforces type safety between nodes — if it compiles, it connects.
+            NPipeline's fluent API makes your pipeline structure visible in your
+            code. The compiler enforces type safety between nodes - if it
+            compiles, it connects.
           </Text>
         </ScrollReveal>
 
@@ -54,7 +62,8 @@ export function CodeSection() {
 
         <ScrollReveal delay={320}>
           <Text ta="center" mt="lg" c="dimmed">
-            Each node is a single class with a single responsibility. Test them in isolation. Compose them into complex workflows.
+            Each node is a single class with a single responsibility. Test them
+            in isolation. Compose them into complex workflows.
           </Text>
         </ScrollReveal>
       </Container>

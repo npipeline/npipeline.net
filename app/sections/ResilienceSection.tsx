@@ -1,4 +1,12 @@
-import { Box, Container, Title, Text, SimpleGrid, Card, Group } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Title,
+  Text,
+  SimpleGrid,
+  Card,
+  Group,
+} from "@mantine/core";
 import { IconRefresh, IconShieldCheck, IconBug } from "@tabler/icons-react";
 import { SectionHeader } from "~/components/SectionHeader";
 import { ScrollReveal } from "~/components/ScrollReveal";
@@ -32,20 +40,36 @@ export function ResilienceSection() {
           <SectionHeader label="Resilience" />
         </ScrollReveal>
         <ScrollReveal delay={80}>
-          <Title order={2} ta="center" mb="xs" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+          <Title
+            order={2}
+            ta="center"
+            mb="xs"
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
+          >
             Built for the real world, where things fail
           </Title>
         </ScrollReveal>
         <ScrollReveal delay={160}>
           <Text ta="center" maw={640} mx="auto" mb="xl" c="dimmed">
-            Production pipelines encounter bad data, network blips, and overwhelmed dependencies. NPipeline gives you the tools to handle failure gracefully — without bringing down your entire system.
+            Production pipelines encounter bad data, network blips, and
+            overwhelmed dependencies. NPipeline gives you the tools to handle
+            failure gracefully - without bringing down your entire system.
           </Text>
         </ScrollReveal>
 
-        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" style={{ gridAutoRows: "1fr" }}>
+        <SimpleGrid
+          cols={{ base: 1, sm: 3 }}
+          spacing="lg"
+          style={{ gridAutoRows: "1fr" }}
+        >
           {resilience.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
-              <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0", height: "100%" }}>
+              <Card
+                padding="xl"
+                radius="sm"
+                bg="white"
+                style={{ border: "1px solid #E4EAF0", height: "100%" }}
+              >
                 <Group gap="sm" align="center" mb="sm">
                   <item.icon size={32} color="#005F73" stroke={1.5} />
                   <Title order={4}>{item.title}</Title>

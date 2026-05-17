@@ -1,4 +1,12 @@
-import { Box, Container, Title, Text, SimpleGrid, Card, Stack } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Title,
+  Text,
+  SimpleGrid,
+  Card,
+  Stack,
+} from "@mantine/core";
 import { SectionHeader } from "~/components/SectionHeader";
 import { ScrollReveal } from "~/components/ScrollReveal";
 
@@ -30,25 +38,47 @@ export function PerformanceSection() {
           <SectionHeader label="Streaming-first" />
         </ScrollReveal>
         <ScrollReveal delay={80}>
-          <Title order={2} ta="center" mb="xs" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+          <Title
+            order={2}
+            ta="center"
+            mb="xs"
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
+          >
             Process more data than fits in memory
           </Title>
         </ScrollReveal>
         <ScrollReveal delay={160}>
           <Text ta="center" maw={640} mx="auto" mb="xl" c="dimmed">
-            NPipeline is streaming-first. Data flows through your pipeline item by item, so memory usage stays constant regardless of dataset size. Process a million records or a billion — your memory footprint stays the same.
+            NPipeline is streaming-first. Data flows through your pipeline item
+            by item, so memory usage stays constant regardless of dataset size.
+            Process a million records or a billion - your memory footprint stays
+            the same.
           </Text>
         </ScrollReveal>
 
         <ScrollReveal delay={240}>
-          <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0" }}>
+          <Card
+            padding="xl"
+            radius="sm"
+            bg="white"
+            style={{ border: "1px solid #E4EAF0" }}
+          >
             <Title order={3} mb="lg">
               Real numbers, real impact
             </Title>
-            <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" style={{ gridAutoRows: "1fr" }}>
+            <SimpleGrid
+              cols={{ base: 1, sm: 3 }}
+              spacing="lg"
+              style={{ gridAutoRows: "1fr" }}
+            >
               {stats.map((s, i) => (
                 <ScrollReveal key={s.title} delay={i * 100}>
-                  <Card padding="lg" radius="sm" bg="#F5F8FC" style={{ height: "100%" }}>
+                  <Card
+                    padding="lg"
+                    radius="sm"
+                    bg="#F5F8FC"
+                    style={{ height: "100%" }}
+                  >
                     <Title order={5} mb="xs" style={{ fontSize: 15 }}>
                       {s.title}
                     </Title>

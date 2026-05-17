@@ -1,11 +1,24 @@
-import { Box, Container, Title, Text, Button, Group, Pill } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Title,
+  Text,
+  Button,
+  Group,
+  Pill,
+} from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
 import { PlaceholderImage } from "~/components/PlaceholderImage";
 import { ScrollReveal } from "~/components/ScrollReveal";
 
 export function HeroSection() {
   return (
-    <Box component="section" pt={75} pb={25} style={{ position: "relative", overflow: "hidden" }}>
+    <Box
+      component="section"
+      pt={75}
+      pb={25}
+      style={{ position: "relative", overflow: "hidden" }}
+    >
       <Container size="lg" style={{ position: "relative", zIndex: 2 }}>
         <ScrollReveal delay={80}>
           <Title
@@ -26,11 +39,22 @@ export function HeroSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={160}>
-          <Text size="xl" fw={500} mb="md" maw={800} style={{ color: "#001219" }}>
-            NPipeline is a powerful, flexible library designed for constructing robust, graph-based streaming data workflows.
+          <Text
+            size="xl"
+            fw={500}
+            mb="md"
+            maw={800}
+            style={{ color: "#001219" }}
+          >
+            NPipeline is a powerful, flexible library designed for constructing
+            robust, graph-based streaming data workflows.
           </Text>
-          <Text size="lg" c="dimmed" maw={600} mb="xl">
-            By combining the type safety of C# with a directed acyclic graph (DAG) architecture, NPipeline empowers developers to build complex ETL processes, real-time data streams, and event-driven architectures that are easy to test, debug, and maintain.
+          <Text size="lg" c="dimmed" maw={800} mb="xl">
+            By combining the type safety of C# with a directed acyclic graph
+            (DAG) architecture, NPipeline empowers developers to build complex
+            ETL processes, real-time data streams, event-driven architectures,
+            and AI-powered classification and enrichment pipelines - all easy to
+            test, debug, and maintain.
           </Text>
         </ScrollReveal>
 
@@ -46,13 +70,18 @@ export function HeroSection() {
             >
               Why NPipeline?
             </Button>
-            <Button size="lg" variant="default" radius="sm" component="a" href="https://docs.npipeline.net/getting-started/quick-start">
+            <Button
+              size="lg"
+              variant="default"
+              radius="sm"
+              component="a"
+              href="https://docs.npipeline.net/getting-started/quick-start"
+            >
               Quick Start
             </Button>
           </Group>
         </ScrollReveal>
       </Container>
-
     </Box>
   );
 }

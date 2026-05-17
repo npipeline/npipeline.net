@@ -22,9 +22,9 @@ export function CodeHighlight({ code, language }: CodeHighlightProps) {
       return html
         .replace(/(\/\/.*)/g, '<span style="color: #005F73">$1</span>') // Comments (Deep Blue-Teal)
         .replace(/\b(public|void|var|new|class|using|namespace|return)\b/g, '<span style="color: #94D2BD">$1</span>') // Keywords (Bright Aqua/Blue)
-        .replace(/\b(builder|context|source|validate|enrich|sink)\b/g, '<span style="color: #f8fafc">$1</span>') // Variables (Off-white for contrast)
+        .replace(/\b(builder|context|source|validate|enrich|sink|policy)\b/g, '<span style="color: #f8fafc">$1</span>') // Variables (Off-white for contrast)
         .replace(/&quot;(.*?)&quot;/g, '<span style="color: #E9D8A6">&quot;$1&quot;</span>') // Strings (Sand - subtle warm accent)
-        .replace(/\b(PipelineBuilder|PipelineContext|OrderSource|Order|ValidateOrder|EnrichWithCustomer|EnrichedOrder|DatabaseSink|PipelineRetryOptions)\b/g, '<span style="color: #0A9396">$1</span>') // Types (Solid Teal)
+        .replace(/\b(PipelineBuilder|PipelineContext|OrderSource|Order|ValidateOrder|EnrichWithCustomer|EnrichedOrder|DatabaseSink|ResiliencePolicyBuilder|TimeoutException)\b/g, '<span style="color: #0A9396">$1</span>') // Types (Solid Teal)
         .replace(/\b(\d+)\b/g, '<span style="color: #EE9B00">$1</span>'); // Numbers (Orange - small accent)
     }
 

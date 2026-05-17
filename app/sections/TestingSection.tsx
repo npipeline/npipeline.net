@@ -1,4 +1,12 @@
-import { Box, Container, Title, Text, SimpleGrid, Card, Group } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Title,
+  Text,
+  SimpleGrid,
+  Card,
+  Group,
+} from "@mantine/core";
 import { IconBox, IconServer, IconTestPipe } from "@tabler/icons-react";
 import { SectionHeader } from "~/components/SectionHeader";
 import { ScrollReveal } from "~/components/ScrollReveal";
@@ -32,20 +40,35 @@ export function TestingSection() {
           <SectionHeader label="Testing" />
         </ScrollReveal>
         <ScrollReveal delay={80}>
-          <Title order={2} ta="center" mb="xs" style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}>
+          <Title
+            order={2}
+            ta="center"
+            mb="xs"
+            style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
+          >
             Designed for testing from day one
           </Title>
         </ScrollReveal>
         <ScrollReveal delay={160}>
           <Text ta="center" maw={640} mx="auto" mb="xl" c="dimmed">
-            Every node is a standalone class. Test your transforms with simple unit tests — no mocking of pipeline infrastructure required.
+            Every node is a standalone class. Test your transforms with simple
+            unit tests - no mocking of pipeline infrastructure required.
           </Text>
         </ScrollReveal>
 
-        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" style={{ gridAutoRows: "1fr" }}>
+        <SimpleGrid
+          cols={{ base: 1, sm: 3 }}
+          spacing="lg"
+          style={{ gridAutoRows: "1fr" }}
+        >
           {testing.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
-              <Card padding="xl" radius="sm" bg="white" style={{ border: "1px solid #E4EAF0", height: "100%" }}>
+              <Card
+                padding="xl"
+                radius="sm"
+                bg="white"
+                style={{ border: "1px solid #E4EAF0", height: "100%" }}
+              >
                 <Group gap="sm" align="center" mb="sm">
                   <item.icon size={32} color="#005F73" stroke={1.5} />
                   <Title order={4}>{item.title}</Title>
